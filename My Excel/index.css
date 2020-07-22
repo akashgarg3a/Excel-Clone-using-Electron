@@ -1,0 +1,230 @@
+html, body{
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+.menu-contaner{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-group {
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid lightgray;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.menu-row {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+
+.menu-row > * {
+    margin: 0px 5px;
+    cursor: pointer;
+    border: 0.5px solid lightgray;
+    border-radius: 2px;
+    height: 21px;
+}
+
+.menu-row > input {
+    width: 25px;
+}
+
+.menu-row > input:hover {
+    transform: scale(1.2);
+}
+
+#font-family {
+    width: 95px;
+    font-size: 9px;
+}
+
+#font-size {
+    width: 60px;
+    font-size: 9px;
+}
+
+#bold.selected, #italic.selected, #underline.selected 
+,#aligment-menu_container input.selected {
+    background-color: teal;
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu_content_container {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+#sheets_bar {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+}
+
+#sheets_bar > div {
+    padding: 2px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#sheets_bar > div:hover {
+    font-weight: bold;
+    z-index: 1;
+}
+
+#sheets_bar #add {
+    width: 40px;
+    text-align: center;
+    border-top: 1px solid grey;
+}
+
+#menu_bar {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+}
+
+#menu_bar > div {
+    margin: 0px 5px 0px 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+}
+
+#menu_bar > div:hover{
+    border-top: 2px solid lightgray;
+    background-color: rgb(7, 179, 7);
+}
+
+#menu_bar >div.selected {
+    background-color: white;
+    color: green;
+}
+
+#formula_bar {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    margin: 1px;
+}
+
+#formula_bar > #cellFormula {
+    flex: 4%;
+}
+
+#formula_bar > #seprator {
+    flex: 2%;
+    margin-left: 1px;
+    font-style: italic;
+}
+
+#formula_bar > #txtFormula {
+    flex: 94%;
+}
+
+#content_container {
+    position: relative;
+    height: calc(100vh - 125px);
+    overflow: auto;
+}
+
+#tl-cell {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    background-color: lightgrey;
+    z-index: 3;
+    border: 1px solid white;
+}
+
+#first-row {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    height: 25px;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;    
+    background-color: lightgrey;
+    z-index: 2;
+    text-align: center;
+}
+
+.cell{
+    width: 70px;
+    border: 1px solid lightgray;
+    line-height: 25px;
+    box-sizing: border-box;
+    font-size: 11px;
+    text-align: center;
+    cursor: cell;
+}
+
+.cell.selected {
+    border : 1px solid teal;
+}
+
+#first-col {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+    width: 25px;
+    background-color: lightgrey;
+    z-index: 2;
+}
+
+#first-col .cell{
+    width: 25px;
+    border: 1px solid white;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#first-row .cell{
+    border: 1px solid white;
+    width: 70px;
+    font-size: 14px;
+}
+
+#grid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#grid > .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#grid .cell {
+    padding-left: 3px;
+    font-size: 11px;
+}
